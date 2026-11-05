@@ -1,0 +1,113 @@
+/* HALİS Pastane — tasarım tokenları v1.0 (tokens.json ile birebir) */
+/* Fontlar: Google Fonts (OFL) — latin-ext alt kümesi ŞART (İ ı Ş ş Ğ ğ ve ₺ U+20BA) */
+/* <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,500..800&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Shrikhand&display=swap" rel="stylesheet"> */
+
+:root {
+  /* — Temel palet (kaynak) — */
+  --renk-beyaz: #FFFFFF;        /* P1 White */
+  --renk-sari: #FFD850;         /* P1 Yellow */
+  --renk-acik-mavi: #009EFF;    /* P1 Light Blue */
+  --renk-lacivert: #1A49AF;     /* P1 Dark Blue */
+  --renk-limon: #FFF500;        /* P2 Shock Lemon Flash */
+  --renk-plazma: #00A3FF;       /* P2 Plasma Blue Core */
+  --renk-mandalina: #E3792F;    /* P3 Tangerine */
+  --renk-fistik: #E9E9C7;       /* P3 Soft Pistacho */
+  --renk-retro-yesil: #30673A;  /* P3 Retro Green */
+
+  /* — Türetilmiş — */
+  --renk-krem: #FFFDF2;
+  --renk-fistik-50: #F4F4E3;
+  --renk-gece: #0F1B3D;
+  --renk-gece-800: #182A5C;
+  --renk-murekkep-2: #4A5B85;
+  --renk-mandalina-700: #B4561A;
+  --renk-mandalina-100: #FBE3D2;
+  --renk-plazma-100: #D6EEFF;
+  --renk-yesil-100: #DCEBD8;
+  --renk-sari-100: #FFF4C7;
+
+  /* — Anlamsal (açık tema) — */
+  --zemin: var(--renk-krem);
+  --yuzey: var(--renk-beyaz);
+  --yuzey-2: var(--renk-fistik-50);
+  --metin: var(--renk-gece);
+  --metin-2: var(--renk-murekkep-2);
+  --baslik: var(--renk-lacivert);
+  --vurgu: var(--renk-plazma);
+  --buton-birincil: var(--renk-lacivert);
+  --buton-birincil-metin: var(--renk-beyaz);
+  --fiyat-zemin: var(--renk-limon);
+  --fiyat-metin: var(--renk-gece);
+  --kenar: var(--renk-fistik);
+  --odak: var(--renk-plazma);
+
+  /* — Kategori — */
+  --kat-tatli: var(--renk-mandalina);      --kat-tatli-acik: var(--renk-mandalina-100);  --kat-tatli-metin: var(--renk-gece);
+  --kat-dondurma: var(--renk-plazma);      --kat-dondurma-acik: var(--renk-plazma-100);  --kat-dondurma-metin: var(--renk-gece);
+  --kat-unlu: var(--renk-sari);            --kat-unlu-acik: var(--renk-sari-100);        --kat-unlu-metin: var(--renk-retro-yesil);
+
+  /* — Tipografi — */
+  --font-baslik: 'Bricolage Grotesque', 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-govde: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-aksan: 'Shrikhand', 'Bricolage Grotesque', cursive;
+  --fs-ekran: 40px; --fs-h1: 30px; --fs-h2: 22px; --fs-h3: 17px; --fs-govde: 15px; --fs-kucuk: 13px; --fs-etiket: 11px; --fs-fiyat: 20px; --fs-aksan: 24px;
+
+  /* — Boşluk — */
+  --b-1: 4px; --b-2: 8px; --b-3: 12px; --b-4: 16px; --b-5: 20px; --b-6: 24px; --b-8: 32px; --b-10: 40px; --b-12: 48px; --b-16: 64px;
+
+  /* — Yarıçap — */
+  --r-xs: 8px; --r-sm: 12px; --r-md: 18px; --r-lg: 24px; --r-xl: 32px; --r-kart: 28px; --r-panel: 32px; --r-tam: 999px;
+
+  /* — Gölge — */
+  --golge-1: 0 1px 2px rgba(15,27,61,.06), 0 2px 6px rgba(15,27,61,.06);
+  --golge-2: 0 4px 10px rgba(15,27,61,.08), 0 12px 24px -8px rgba(15,27,61,.14);
+  --golge-3: 0 10px 24px rgba(15,27,61,.10), 0 24px 48px -12px rgba(15,27,61,.22);
+  --golge-tatli: 0 14px 28px -10px rgba(227,121,47,.55);
+  --golge-dondurma: 0 14px 28px -10px rgba(0,163,255,.55);
+  --golge-unlu: 0 14px 28px -10px rgba(214,170,30,.55);
+  --golge-retro: 4px 4px 0 var(--renk-gece);
+
+  /* — Hareket — */
+  --sure-anlik: 90ms; --sure-hizli: 160ms; --sure-kisa: 220ms; --sure-orta: 350ms; --sure-uzun: 420ms; --sure-acilis: 1900ms;
+  --egri-cikis: cubic-bezier(0.22, 1, 0.36, 1);
+  --egri-vurgulu: cubic-bezier(0.2, 0, 0, 1);
+  --egri-kapanis: cubic-bezier(0.4, 0, 0.2, 1);
+  --egri-giris: cubic-bezier(0.4, 0, 1, 1);
+  /* Yay eğrileri: CSS linear() ile örneklenmiş (Chrome 113+, Safari 17.2+, Firefox 112+). Desteklemeyen tarayıcıda --egri-cikis'e düşer. */
+  --yay-yumusak: var(--egri-cikis);
+  --yay-zipla: var(--egri-cikis);
+  --yay-panel: var(--egri-cikis);
+  --kademe-liste: 45ms; --kademe-metin: 40ms; --kademe-logo: 70ms;
+  --basma-olcek: 0.95;
+
+  /* — Katman — */
+  --z-baslik: 20; --z-altbar: 30; --z-detay: 40; --z-toast: 50;
+}
+@supports (transition-timing-function: linear(0, 1)) {
+  :root {
+    /* sertlik 380 / sönümleme 30 / kütle 1  (≈453 ms, aşım ~%2.2) — animasyon süresi olarak 453ms verin */
+    --yay-yumusak: linear(0, 0.0358, 0.1179, 0.2253, 0.3469, 0.4636, 0.5727, 0.6701, 0.7567, 0.8261, 0.8821, 0.9273, 0.9602, 0.9842, 1.0008, 1.012, 1.0182, 1.0212, 1.0219, 1.021, 1.0191, 1.0167, 1.014, 1.0115, 1.0091, 1.0069, 1.0051, 1.0036, 1.0025, 1.0015, 1.0008, 1.0003, 1);
+    /* sertlik 500 / sönümleme 26 / kütle 1  (≈492 ms, aşım ~%10.5) — animasyon süresi olarak 492ms verin */
+    --yay-zipla: linear(0, 0.0541, 0.1832, 0.3497, 0.5191, 0.6831, 0.8235, 0.9345, 1.0128, 1.0658, 1.0947, 1.1045, 1.1012, 1.089, 1.0721, 1.0544, 1.0368, 1.0215, 1.0095, 1.0003, 0.9941, 0.9906, 0.9891, 0.9892, 0.9903, 0.992, 0.9939, 0.9958, 0.9974, 0.9987, 0.9998, 1.0005, 1);
+    /* sertlik 300 / sönümleme 28 / kütle 1  (≈510 ms, aşım ~%1.3) — animasyon süresi olarak 510ms verin */
+    --yay-panel: linear(0, 0.0342, 0.1157, 0.2223, 0.3383, 0.4531, 0.5601, 0.6526, 0.7351, 0.8039, 0.86, 0.9043, 0.9384, 0.9633, 0.982, 0.995, 1.0036, 1.0089, 1.0117, 1.0127, 1.0126, 1.0118, 1.0105, 1.0091, 1.0076, 1.0062, 1.0049, 1.0038, 1.0029, 1.0021, 1.0014, 1.001, 1);
+  }
+}
+[data-tema="koyu"] {
+  --zemin: var(--renk-gece);
+  --yuzey: var(--renk-gece-800);
+  --yuzey-2: #1F3470;
+  --metin: var(--renk-krem);
+  --metin-2: #9DB0D9;
+  --baslik: var(--renk-sari);
+  --buton-birincil: var(--renk-sari);
+  --buton-birincil-metin: var(--renk-gece);
+  --kenar: #2A3F7A;
+  --odak: var(--renk-limon);
+  --golge-1: 0 1px 2px rgba(0,0,0,.3);
+  --golge-2: 0 6px 18px rgba(0,0,0,.35);
+  --golge-3: 0 16px 40px rgba(0,0,0,.45);
+}
+@media (prefers-reduced-motion: reduce) {
+  :root { --sure-hizli: 1ms; --sure-kisa: 1ms; --sure-orta: 120ms; --sure-uzun: 120ms; --kademe-liste: 0ms; --kademe-metin: 0ms; }
+}

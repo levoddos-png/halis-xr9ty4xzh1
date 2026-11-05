@@ -1,0 +1,50 @@
+{
+ "dokunma": {
+  "sure_ms": 45,
+  "tepe_dBFS": {
+   "wav": -10.0,
+   "mp3": -10.6,
+   "ogg": -9.9
+  }
+ },
+ "kategori-gecis": {
+  "sure_ms": 120,
+  "tepe_dBFS": {
+   "wav": -10.0,
+   "mp3": -10.3,
+   "ogg": -10.0
+  }
+ },
+ "kart-acilma": {
+  "sure_ms": 170,
+  "tepe_dBFS": {
+   "wav": -9.0,
+   "mp3": -9.4,
+   "ogg": -8.7
+  }
+ },
+ "geri": {
+  "sure_ms": 130,
+  "tepe_dBFS": {
+   "wav": -10.0,
+   "mp3": -10.4,
+   "ogg": -10.1
+  }
+ },
+ "listeye-ekle": {
+  "sure_ms": 360,
+  "tepe_dBFS": {
+   "wav": -8.0,
+   "mp3": -8.4,
+   "ogg": -8.2
+  }
+ },
+ "ses-acik": {
+  "sure_ms": 200,
+  "tepe_dBFS": {
+   "wav": -10.0,
+   "mp3": -10.4,
+   "ogg": -10.5
+  }
+ }
+}
