@@ -88,8 +88,9 @@ class CartStore {
   /**
    * Listeye ürün ekler veya varsa adedini artırır
    */
-  addItem({ productId, ad, portionIndex = 0, portionName = '', unitPrice = 0, quantity = 1, image = '' }) {
-    const key = `${productId}_${portionIndex}`;
+  addItem({ productId, ad, portionIndex = 0, portionName = '', boyId = '', ekstraIds = [], ekstraAd = '', unitPrice = 0, quantity = 1, image = '' }) {
+    const extraKey = (ekstraIds || []).slice().sort().join('+');
+    const key = `${productId}_${boyId || portionIndex}_${extraKey}`;
     const existingIndex = this.items.findIndex(i => i.key === key);
 
     if (existingIndex > -1) {
@@ -101,6 +102,9 @@ class CartStore {
         ad,
         portionIndex,
         portionName: portionName || 'Porsiyon',
+        boyId: boyId || '',
+        ekstraIds: Array.isArray(ekstraIds) ? [...ekstraIds] : [],
+        ekstraAd: ekstraAd || '',
         unitPrice: Number(unitPrice),
         quantity: Math.max(1, quantity),
         image

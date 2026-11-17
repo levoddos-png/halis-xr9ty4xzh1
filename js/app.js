@@ -2,7 +2,7 @@
  * HALİS QR Web Menü — Ana Uygulama Giriş Noktası
  */
 
-import { loadMenuData, getProduct, getProductImage } from './data.js';
+import { loadMenuData, getProduct, getProductImage, getProductSizes, loc, t, getLang, setLang, formatTL } from './data.js';
 import { router } from './router.js';
 import { sound } from './audio.js';
 import { theme } from './theme.js';
@@ -38,6 +38,7 @@ async function registerServiceWorker() {
 async function bootstrap() {
   // Menü verisini yükle
   await loadMenuData();
+  document.documentElement.lang = getLang();
 
   // PWA Service Worker kaydı
   registerServiceWorker();
@@ -62,6 +63,16 @@ async function bootstrap() {
       const hash = navBtn.dataset.hash || '#/';
       sound.play('kategori-gecis');
       router.navigate(hash);
+      return;
+    }
+
+    // Dil
+    const dilBtn = e.target.closest('[data-action="dil-toggle"]');
+    if (dilBtn) {
+      e.preventDefault();
+      sound.play('dokunma');
+      setLang(getLang() === 'tr' ? 'en' : 'tr');
+      router.refresh();
       return;
     }
 
@@ -106,20 +117,23 @@ async function bootstrap() {
       e.preventDefault();
       e.stopPropagation();
       const pId = hizliEkleBtn.dataset.id;
-      const product = getProduct(pId);
-      if (product) {
-        const portion = product.porsiyon[0] || [product.ad, product.fiyat];
+      const product = getProduct(pId, { includeHidden: false });
+      if (product && !product.tukendi) {
+        const sizes = getProductSizes(product);
+        const portion = sizes[0];
+        const portionName = loc(portion.ad);
         cart.addItem({
           productId: product.id,
-          ad: product.ad,
+          ad: loc(product.ad),
           portionIndex: 0,
-          portionName: portion[0],
-          unitPrice: portion[1],
+          portionName,
+          boyId: portion.id,
+          unitPrice: portion.fiyat,
           quantity: 1,
-          image: getProductImage(product.id, '@600.webp')
+          image: getProductImage(product.id)
         });
         sound.play('listeye-ekle');
-        showToast('Listene eklendi', `1 × ${product.ad} (${portion[0]})`, getProductImage(product.id, '@600.webp'));
+        showToast(t('listene_eklendi'), `1 × ${loc(product.ad)} (${portionName})`, getProductImage(product.id));
       }
       return;
     }

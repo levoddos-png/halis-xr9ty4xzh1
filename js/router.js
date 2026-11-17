@@ -10,6 +10,7 @@ import { renderSplashScreen } from './views/splash.js';
 import { renderSearchView } from './views/search.js';
 import { renderAboutView } from './views/about.js';
 import { renderListemView } from './views/listem.js';
+import { renderSiparisView } from './views/siparis.js';
 import { transitionCardToDetail } from './transitions.js';
 import { sound } from './audio.js';
 
@@ -55,6 +56,10 @@ class Router {
     }
   }
 
+  refresh() {
+    this.handleRoute();
+  }
+
   handleRoute() {
     const rawHash = window.location.hash || '#/';
     const hash = rawHash.replace(/^#\/?/, '');
@@ -89,6 +94,15 @@ class Router {
 
     if (section === 'bilgi' || section === 'hakkimizda') {
       renderAboutView(this.root, {
+        onNavigateHome: () => {
+          this.navigate('#/');
+        }
+      });
+      return;
+    }
+
+    if (section === 'ozel-siparis' || section === 'pasta') {
+      renderSiparisView(this.root, {
         onNavigateHome: () => {
           this.navigate('#/');
         }

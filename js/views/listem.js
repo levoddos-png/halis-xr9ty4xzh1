@@ -7,14 +7,14 @@
 
 import { renderHeader, renderAltbar, showToast } from '../components.js';
 import { cart } from '../cart.js';
-import { formatTL } from '../data.js';
+import { formatTL, getTableNumber, t } from '../data.js';
 import { ik } from '../icons.js';
 import { sound } from '../audio.js';
 import { animateStaggeredEntrance } from '../transitions.js';
 
 export function renderListemView(container, { onNavigateHome, onNavigateProduct } = {}) {
+  const tableNo = getTableNumber();
   const urlParams = new URLSearchParams(window.location.search);
-  const tableNo = urlParams.get('masa') || '7';
 
   // Demo / Test parametresi ile örnek liste doldurma
   if ((urlParams.get('demo') === '1' || urlParams.get('ornek') === '1') && cart.getItems().length === 0) {
@@ -34,7 +34,7 @@ export function renderListemView(container, { onNavigateHome, onNavigateProduct 
       <div class="ekran listem-ekran" data-ekran="listem">
         ${renderHeader({
           back: false,
-          title: 'Listem',
+          title: t('listem'),
           showSound: true,
           showTheme: true,
           showSearch: true,
@@ -43,9 +43,9 @@ export function renderListemView(container, { onNavigateHome, onNavigateProduct 
 
         <main class="kaydir" id="listemKaydir" style="padding-top:10px; padding-bottom:120px">
           <div style="padding:4px 16px 0">
-            <h1 class="h1">Listem</h1>
+            <h1 class="h1">${t('listem')}</h1>
             <div class="kucuk" style="margin-top:4px">
-              Sipariş vermek için listeni garsona göster.
+              ${t('listem_ipucu')}
             </div>
           </div>
 
@@ -58,12 +58,12 @@ export function renderListemView(container, { onNavigateHome, onNavigateProduct 
                   <path d="M9 9h6M9 13h6M9 17h3"></path>
                 </svg>
               </div>
-              <h2 class="h2" style="margin-top:20px; font-weight:800; color:var(--baslik)">Listen henüz boş</h2>
+              <h2 class="h2" style="margin-top:20px; font-weight:800; color:var(--baslik)">${t('listem_bos')}</h2>
               <div style="margin-top:8px; font-size:15px; line-height:1.5; color:var(--metin-2); max-width:300px; margin-left:auto; margin-right:auto">
-                Beğendiğin tatlı, dondurma ve hamur işlerini ekle; garsonuna tek dokunuşla göster.
+                ${t('listem_bos_aciklama')}
               </div>
               <button class="buton ikincil" style="margin-top:26px" id="listemMenuDonBtn">
-                Menüye Göz At
+                ${t('menuye_goz_at')}
               </button>
             </div>
           ` : `
@@ -108,8 +108,8 @@ export function renderListemView(container, { onNavigateHome, onNavigateProduct 
             <!-- Toplam Alanı -->
             <div class="liste-oge" style="margin:16px 16px 0; border-top:2px dashed var(--kenar); padding-top:14px; display:flex; justify-content:space-between; align-items:center">
               <div>
-                <span class="h3">Toplam</span>
-                <div class="kucuk" style="margin-top:2px">${totalCount} ürün</div>
+                <span class="h3">${t('toplam')}</span>
+                <div class="kucuk" style="margin-top:2px">${totalCount} ${t('urun_sayisi')}</div>
               </div>
               <span class="fiyat buyuk">${formatTL(totalPrice)}</span>
             </div>
@@ -117,16 +117,16 @@ export function renderListemView(container, { onNavigateHome, onNavigateProduct 
             <!-- Butonlar -->
             <div class="liste-oge" style="padding:20px 16px 0; display:flex; flex-direction:column; gap:10px">
               <button class="buton ikincil genis" id="garsonaGosterBtn" style="font-size:16px">
-                ${ik('garson')} Garsona göster
+                ${ik('garson')} ${t('garsona_goster')}
               </button>
               <button class="buton hayalet genis" id="listeyiTemizleBtn" style="font-size:15px">
-                ${ik('temizle')} Listeyi temizle
+                ${ik('temizle')} ${t('listeyi_temizle')}
               </button>
             </div>
 
             <!-- Bilgilendirme Notu -->
             <div class="kucuk liste-oge" style="text-align:center; margin-top:14px; font-size:12px; padding:0 20px">
-              Bu liste yalnızca bu cihazda tutulur; sipariş verilmez veya ödeme alınmaz.
+              ${t('liste_not')}
             </div>
           `}
         </main>
@@ -138,8 +138,8 @@ export function renderListemView(container, { onNavigateHome, onNavigateProduct 
           <div style="background:var(--yuzey); color:var(--metin); border-radius:32px; padding:26px 22px; width:100%; max-width:380px; box-shadow:var(--golge-3); position:relative; max-height:85vh; display:flex; flex-direction:column">
             <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:2px solid var(--kenar); padding-bottom:12px">
               <div>
-                <span class="etiket" style="color:var(--renk-mandalina-700)">Garson Sipariş Özeti</span>
-                <h2 class="h1" style="font-size:24px; margin-top:2px; color:var(--baslik)">Masa ${tableNo}</h2>
+                <span class="etiket" style="color:var(--renk-mandalina-700)">${t('garson_ozet')}</span>
+                <h2 class="h1" style="font-size:24px; margin-top:2px; color:var(--baslik)">${tableNo ? t('masa') + ' ' + tableNo : t('garson_ozet')}</h2>
               </div>
               <button id="modalKapatBtn" class="ikon-buton" style="box-shadow:none; background:var(--yuzey-2)" aria-label="Kapat">
                 ${ik('kapat')}
@@ -166,14 +166,14 @@ export function renderListemView(container, { onNavigateHome, onNavigateProduct 
 
             <div style="border-top:2px solid var(--kenar); padding-top:14px; display:flex; justify-content:space-between; align-items:baseline">
               <div>
-                <div class="etiket" style="color:var(--metin-2)">Genel Toplam</div>
-                <div class="h3" style="margin-top:2px">${totalCount} çeşit ürün</div>
+                <div class="etiket" style="color:var(--metin-2)">${t('toplam')}</div>
+                <div class="h3" style="margin-top:2px">${totalCount} ${t('urun_sayisi')}</div>
               </div>
               <span class="fiyat buyuk">${formatTL(totalPrice)}</span>
             </div>
 
             <button class="buton birincil genis" id="modalTamamBtn" style="margin-top:16px">
-              ${ik('onay')} Ekranı Kapat
+              ${ik('onay')} ${t('kapat')}
             </button>
           </div>
         </div>
@@ -226,23 +226,23 @@ export function renderListemView(container, { onNavigateHome, onNavigateProduct 
       btn.addEventListener('click', () => {
         sound.play('geri');
         cart.removeItem(btn.dataset.key);
-        showToast('Ürün listeden çıkarıldı');
+        showToast(t('urun_cikarildi'));
         render();
       });
     });
 
-    // Listeyi temizle
+    // ${t('listeyi_temizle')}
     const temizleBtn = container.querySelector('#listeyiTemizleBtn');
     if (temizleBtn) {
       temizleBtn.addEventListener('click', () => {
         sound.play('geri');
         cart.clearList();
-        showToast('Listen temizlendi');
+        showToast(t('liste_temizlendi'));
         render();
       });
     }
 
-    // Garsona göster modalı
+    // ${t('garsona_goster')} modalı
     const modalEl = container.querySelector('#garsonModal');
     const garsonaGosterBtn = container.querySelector('#garsonaGosterBtn');
     const modalKapatBtn = container.querySelector('#modalKapatBtn');

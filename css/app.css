@@ -1368,3 +1368,89 @@ mark {
   }
 }
 
+
+/* ——— v3: dil, tükendi, açık/kapalı, ekstra, özel pasta ——— */
+.dil-buton {
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: .04em;
+  min-width: 40px;
+}
+.kart.tukendi, .satir.tukendi { opacity: .82; }
+.tukendi-ortu {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(15,27,61,.45);
+  color: #fff;
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: .02em;
+  border-radius: inherit;
+}
+.kare-gorsel { position: relative; }
+.tukendi-ortu.kucuk-ortu { font-size: 10px; }
+.tukendi-rozet { background: var(--renk-gece); color: var(--renk-limon); }
+.tukendi-mini {
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--renk-mandalina-700);
+  white-space: nowrap;
+}
+.ornek-etiket { font-weight: 700; font-size: 10px; opacity: .75; margin-left: 4px; }
+.durum-acik { background: var(--renk-yesil-100); color: var(--renk-retro-yesil); }
+.durum-yakinda { background: var(--renk-sari-100); color: var(--renk-mandalina-700); }
+.durum-kapali { background: var(--yuzey-2); color: var(--metin-2); }
+.etiket.durum-acik, .etiket.durum-yakinda, .etiket.durum-kapali { padding: 4px 8px; border-radius: 999px; }
+.ekstra-liste { display: flex; flex-direction: column; gap: 8px; }
+.ekstra-satir {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--yuzey-2);
+  border-radius: 14px;
+  padding: 10px 12px;
+  font-weight: 650;
+  cursor: pointer;
+}
+.ekstra-satir input { width: 18px; height: 18px; accent-color: var(--renk-lacivert); }
+.ekstra-satir span:nth-child(2) { flex: 1; }
+.ozel-pasta-cta {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  background: var(--yuzey);
+  border: 1px solid var(--kenar);
+  border-radius: var(--r-kart);
+  padding: 16px 18px;
+  box-shadow: var(--golge-1);
+  text-decoration: none;
+  color: inherit;
+}
+.ozel-pasta-cta strong { display: block; font-family: var(--font-baslik); font-size: 16px; color: var(--baslik); }
+.ozel-pasta-cta small { display: block; margin-top: 4px; color: var(--metin-2); font-size: 13px; line-height: 1.4; }
+.ozel-form { display: flex; flex-direction: column; gap: 12px; }
+.ozel-form label { display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 700; color: var(--metin-2); }
+.ozel-form input, .ozel-form textarea {
+  border: 1px solid var(--kenar);
+  border-radius: 14px;
+  padding: 12px 14px;
+  font: inherit;
+  font-weight: 600;
+  color: var(--metin);
+  background: var(--yuzey);
+}
+.uyari-kutu {
+  background: var(--renk-sari-100);
+  color: var(--renk-gece);
+  border-radius: 16px;
+  padding: 12px 14px;
+  font-size: 13px;
+  font-weight: 650;
+  margin-bottom: 14px;
+}
+button.buton:disabled, button.buton[disabled] {
+  opacity: .6;
+  cursor: not-allowed;
+}

@@ -5,7 +5,7 @@
  * Göreli yollarla çalışır (GitHub Pages alt klasörleri veya yerel sunucu).
  */
 
-const CACHE_NAME = 'halis-qr-v2.0';
+const CACHE_NAME = 'halis-qr-v3.0';
 
 const PRECACHE_ASSETS = [
   './',
@@ -33,6 +33,7 @@ const PRECACHE_ASSETS = [
   './js/views/search.js',
   './js/views/about.js',
   './js/views/listem.js',
+  './js/views/siparis.js',
   './assets/logo/halis-wordmark-acik.svg',
   './assets/logo/halis-wordmark-koyu.svg',
   './assets/logo/halis-wordmark-yalin-acik.svg',
@@ -113,20 +114,19 @@ self.addEventListener('fetch', (event) => {
 
   const url = new URL(req.url);
 
-  // menu.json için Stale-While-Revalidate stratejisi (Önce önbellek, arka planda ağ güncellemesi)
+  // Admin paneli önbelleğe alınmaz
+  if (url.pathname.includes('/admin')) return;
+
+  // menu.json için önce ağ (admin kaydı hızlı görünsün), yoksa önbellek
   if (url.pathname.endsWith('menu.json')) {
     event.respondWith(
-      caches.open(CACHE_NAME).then((cache) => {
-        return cache.match(req).then((cachedResponse) => {
-          const fetchPromise = fetch(req).then((networkResponse) => {
-            if (networkResponse.status === 200) {
-              cache.put(req, networkResponse.clone());
-            }
-            return networkResponse;
-          }).catch(() => cachedResponse);
-          return cachedResponse || fetchPromise;
-        });
-      })
+      fetch(req).then((networkResponse) => {
+        if (networkResponse && networkResponse.status === 200) {
+          const copy = networkResponse.clone();
+          caches.open(CACHE_NAME).then((cache) => cache.put(req, copy));
+        }
+        return networkResponse;
+      }).catch(() => caches.match(req))
     );
     return;
   }

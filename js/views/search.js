@@ -5,7 +5,7 @@
  */
 
 import { renderAltbar, BOS_ILLUSTRASYON } from '../components.js';
-import { getProducts, getCategories, formatTL, getProductImage } from '../data.js';
+import { getProducts, getCategories, formatTL, getProductImage, loc, t } from '../data.js';
 import { ik } from '../icons.js';
 import { sound } from '../audio.js';
 import { animateStaggeredEntrance } from '../transitions.js';
@@ -15,7 +15,10 @@ import { animateStaggeredEntrance } from '../transitions.js';
  */
 export function normalizeTr(text) {
   if (!text) return '';
-  return text
+  if (typeof text === 'object') {
+    text = `${text.tr || ''} ${text.en || ''}`;
+  }
+  return String(text)
     .toLocaleLowerCase('tr-TR')
     .replace(/ı/g, 'i')
     .replace(/ğ/g, 'g')
@@ -285,18 +288,16 @@ export function renderSearchView(container, { onNavigateProduct, onNavigateHome 
     const resultsListHtml = `
       <div style="display:flex; flex-direction:column; gap:10px; padding:0 16px" id="sonucListesi">
         ${currentResults.map(u => `
-          <div class="satir" data-urun="${u.id}" role="button" tabindex="0" aria-label="${u.ad}, ${u.fiyat} lira">
+          <div class="satir ${u.tukendi ? 'tukendi' : ''}" data-urun="${u.id}" role="button" tabindex="0" aria-label="${loc(u.ad)}, ${u.fiyat} lira">
             <div class="kare-gorsel">
-              <img src="${getProductImage(u.id, '@600.webp')}" alt="${u.ad}" width="76" height="76" loading="lazy">
+              <img src="${getProductImage(u.id)}" alt="${loc(u.ad)}" width="76" height="76" loading="lazy">
             </div>
             <div class="ic">
-              <div class="ad">${highlightText(u.ad, query)}</div>
-              <div class="kucuk" style="margin-top:3px">${highlightText(u.kisa, query)}</div>
+              <div class="ad">${highlightText(loc(u.ad), query)}${u.tukendi ? ` · ${t('tukendi')}` : ''}</div>
+              <div class="kucuk" style="margin-top:3px">${highlightText(loc(u.kisa), query)}</div>
             </div>
             <span class="fiyat kucuk-f duz" style="margin-right:4px">${formatTL(u.fiyat)}</span>
-            <button class="arti" data-action="hizli-ekle" data-id="${u.id}" aria-label="${u.ad} listeme ekle" style="margin-left:4px">
-              ${ik('arti')}
-            </button>
+            ${u.tukendi ? `<span class="tukendi-mini">${t('tukendi')}</span>` : `<button class="arti" data-action="hizli-ekle" data-id="${u.id}" aria-label="${loc(u.ad)}" style="margin-left:4px">${ik('arti')}</button>`}
           </div>
         `).join('')}
       </div>

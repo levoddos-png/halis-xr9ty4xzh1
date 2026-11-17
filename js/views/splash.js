@@ -4,6 +4,7 @@
  */
 
 import { DEKO, dekoEl } from '../icons.js';
+import { getTableNumber, loc, getMenu } from '../data.js';
 import { EASING, DURATION, isReducedMotion } from '../transitions.js';
 
 export async function renderSplashScreen(container, onComplete, force = false) {
@@ -34,8 +35,8 @@ export async function renderSplashScreen(container, onComplete, force = false) {
     <div class="splash-logo-sahne" id="splashLogo"></div>
 
     <div class="splash-karsilama" id="splashKarsilama" style="opacity:0">
-      <div class="etiket" style="color:var(--renk-lacivert); font-size:12px; letter-spacing:0.1em">QR Menü · Masa 7</div>
-      <div class="kucuk" style="margin-top:6px; font-size:14px; color:var(--metin-2)">Taze, tatlı, sıcak — her gün</div>
+      <div class="etiket" style="color:var(--renk-lacivert); font-size:12px; letter-spacing:0.1em">${getTableNumber() ? `QR Menü · Masa ${getTableNumber()}` : 'QR Menü'}</div>
+      <div class="kucuk" style="margin-top:6px; font-size:14px; color:var(--metin-2)">${loc((getMenu().dukkan || {}).slogan) || ''}</div>
     </div>
 
     <div class="splash-yukleniyor" id="splashYukleniyor">

@@ -3,8 +3,8 @@
  * Renkli kategori bandı, yapışkan çipler, kayan hap ve 2 sütunlu ürün ızgarası.
  */
 
-import { renderHeader, renderAltbar, renderProductCard, showToast } from '../components.js';
-import { getCategory, getCategories, getProductsByCategory, formatTL } from '../data.js';
+import { renderHeader, renderAltbar, renderProductCard, showToast, renderLangButton } from '../components.js';
+import { getCategory, getCategories, getProductsByCategory, formatTL, loc, t } from '../data.js';
 import { ik, DEKO, dekoEl } from '../icons.js';
 import { animateStaggeredEntrance } from '../transitions.js';
 import { sound } from '../audio.js';
@@ -33,12 +33,12 @@ export function renderCategoryView(container, categoryId = 'tatlilar', { onNavig
 
   const chipsHtml = `
     <div class="cipler">
-      <button class="cip" data-kat="hepsi">Tümü</button>
+      <button class="cip" data-kat="hepsi">${t('tumu')}</button>
       ${allCategories.map(k => `
         <button class="cip ${k.id === currentCategory.id ? 'secili' : ''}" data-kat="${k.id}">
           <span class="renk" style="background:${k.renk}"></span>
-          ${k.ad}
-          <span class="sayi">${k.sayi || 5}</span>
+          ${loc(k.ad)}
+          <span class="sayi">${k.sayi || 0}</span>
         </button>
       `).join('')}
     </div>
@@ -57,7 +57,8 @@ export function renderCategoryView(container, categoryId = 'tatlilar', { onNavig
               ${ik('geri')}
             </button>
             <div style="flex:1"></div>
-            <button class="ikon-buton cam" aria-label="Temayı Değiştir" data-action="tema-toggle" title="Temayı Değiştir">
+            ${renderLangButton(true)}
+            <button class="ikon-buton cam" aria-label="Tema" data-action="tema-toggle" title="Tema">
               ${ik(theme.isDark() ? 'gunes' : 'ay')}
             </button>
             <button class="ikon-buton cam" aria-label="Ses" data-action="ses-toggle">
@@ -70,9 +71,9 @@ export function renderCategoryView(container, categoryId = 'tatlilar', { onNavig
 
           <!-- Kategori Başlığı -->
           <div class="kat-baslik">
-            <div class="etiket" style="opacity:.75">Kategori · ${products.length} lezzet</div>
-            <h1 class="h-ekran" style="margin-top:6px">${currentCategory.ad}</h1>
-            <div style="margin-top:6px; font-weight:700; font-size:14px; opacity:.85">${currentCategory.aciklama}</div>
+            <div class="etiket" style="opacity:.75">${t('kategori')} · ${products.length} ${t('lezzet')}</div>
+            <h1 class="h-ekran" style="margin-top:6px">${loc(currentCategory.ad)}</h1>
+            <div style="margin-top:6px; font-weight:700; font-size:14px; opacity:.85">${loc(currentCategory.aciklama)}</div>
           </div>
         </section>
 

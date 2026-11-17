@@ -1,280 +1,4302 @@
 {
-  "_aciklama": "HALİS Pastane QR Web Menü Verisi - BU MENÜ VERİLERİ ÖRNEK VERİDİR (Görseller, fiyatlar ve mağaza bilgileri temsilîdir)",
+  "_aciklama": "HALİS Pastanesi gerçek menü verisi. Kaynak: https://halismenu.com/ (Menum.co, çekim 2026-11-17 08:10 Europe/Istanbul). İsimler kaynaktaki yazımıyla bırakıldı. haftanin_secimi ve cok_satanlar işletmenin seçmesi için boş. Wi-Fi henüz verilmedi. Alerjen ve içindekiler yalnızca sitede yazanlarda dolduruldu.",
   "dukkan": {
-    "ad": "HALİS Pastane",
-    "slogan": "Taze, tatlı, sıcak — her gün",
-    "alt_slogan": "Mahallenin tatlı köşesi",
-    "aciklama": "Sabah simidinden akşam dondurmasına, her şeyi kendi fırınımızda, her gün taze hazırlıyoruz.",
-    "adres": "Örnek Mah. Lezzet Sok. No: 7 Kadıköy / İstanbul",
-    "telefon": "0 (216) 000 00 00",
-    "instagram": "@halispastane",
+    "ad": {
+      "tr": "HALİS PASTANESİ",
+      "en": ""
+    },
+    "slogan": {
+      "tr": "Geçmişten Günümüze Eşsiz Lezzet",
+      "en": ""
+    },
+    "alt_slogan": {
+      "tr": "",
+      "en": ""
+    },
+    "aciklama": {
+      "tr": "Pazarcık'ın Tek üretici firması ve geçmişten günümüze değişmeyen eşsiz lezzetleri...",
+      "en": ""
+    },
+    "adres": "15 Temmuz Mah. 83129 Sok. No: 8/A Pazarcık/Kahramanmaraş",
+    "telefon": "+90 542 312 44 89",
+    "instagram": "@halispastanesi",
+    "whatsapp": "905423124489",
+    "whatsapp_ornek": false,
     "wifi": {
-      "ssid": "HALIS-Misafir",
-      "sifre": "tatli2026"
+      "ssid": "",
+      "sifre": ""
     },
     "saatler": [
-      { "gunler": "Pazartesi – Cuma", "saat": "07:00 – 22:00", "vurgu": false },
-      { "gunler": "Cumartesi", "saat": "08:00 – 23:00", "vurgu": true },
-      { "gunler": "Pazar", "saat": "08:00 – 22:00", "vurgu": false }
+      {
+        "gunler": {
+          "tr": "Her gün",
+          "en": "Every day"
+        },
+        "saat": "08:00 – 00:00",
+        "acilis": "08:00",
+        "kapanis": "00:00",
+        "gunler_id": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "vurgu": false
+      }
     ],
-    "durum": "Şu an açık",
-    "temsili_not": "Görseller, adres, telefon ve Wi-Fi bilgileri temsilîdir (Örnek Veri)."
+    "masa_sayisi": 20,
+    "temsili_not": ""
   },
-  "haftanin_secimi": "baklava",
-  "cok_satanlar": [
-    "maras-dondurmasi",
-    "simit",
-    "profiterol"
+  "haftanin_secimi": "",
+  "cok_satanlar": [],
+  "alerjenler": {
+    "sut": {
+      "tr": "Süt ve Süt Ürünleri",
+      "en": ""
+    },
+    "kabuklu": {
+      "tr": "Kabuklu Kuruyemişler",
+      "en": ""
+    },
+    "yumurta": {
+      "tr": "Yumurta",
+      "en": ""
+    }
+  },
+  "ekstra_katalog": [
+    {
+      "id": "ilave-dondurma",
+      "ad": {
+        "tr": "İlave dondurma",
+        "en": ""
+      },
+      "fiyat": 90
+    },
+    {
+      "id": "ilave-maras-dondurmasi",
+      "ad": {
+        "tr": "İlave Maraş dondurması",
+        "en": ""
+      },
+      "fiyat": 90
+    },
+    {
+      "id": "ilave-maras-dondurmasi-100",
+      "ad": {
+        "tr": "İlave Maraş dondurması",
+        "en": ""
+      },
+      "fiyat": 100
+    }
   ],
   "kategoriler": [
     {
-      "id": "tatlilar",
-      "ad": "Tatlılar",
-      "renk": "#E3792F",
-      "renk_degisken": "var(--kat-tatli)",
-      "acik": "var(--kat-tatli-acik)",
-      "metin": "var(--kat-tatli-metin)",
-      "golge": "var(--golge-tatli)",
-      "aciklama": "Şerbetli, sütlü, çikolatalı",
-      "sayi": 5,
-      "temsili_urun": "trilece"
+      "id": "kokteyl",
+      "ad": {
+        "tr": "Kokteyl",
+        "en": ""
+      },
+      "aciklama": {
+        "tr": "",
+        "en": ""
+      },
+      "renk": "#009EFF",
+      "renk_degisken": "var(--renk-acik-mavi)",
+      "acik": "var(--renk-plazma-100)",
+      "metin": "var(--renk-gece)",
+      "golge": "var(--golge-dondurma)",
+      "temsili_urun": "cool-lime"
     },
     {
-      "id": "dondurmalar",
-      "ad": "Dondurmalar",
+      "id": "frozen-milkshake",
+      "ad": {
+        "tr": "Frozen & Milkshake",
+        "en": ""
+      },
+      "aciklama": {
+        "tr": "",
+        "en": ""
+      },
       "renk": "#00A3FF",
       "renk_degisken": "var(--kat-dondurma)",
       "acik": "var(--kat-dondurma-acik)",
       "metin": "var(--kat-dondurma-metin)",
       "golge": "var(--golge-dondurma)",
-      "aciklama": "Maraş usulü & sorbeler",
-      "sayi": 5,
-      "temsili_urun": "kulah-dondurma"
+      "temsili_urun": "karadut-frozen"
     },
     {
-      "id": "unlu",
-      "ad": "Unlu Mamüller",
+      "id": "serbetli-tatlilar",
+      "ad": {
+        "tr": "Şerbetli Tatlılar",
+        "en": ""
+      },
+      "aciklama": {
+        "tr": "",
+        "en": ""
+      },
+      "renk": "#E3792F",
+      "renk_degisken": "var(--kat-tatli)",
+      "acik": "var(--kat-tatli-acik)",
+      "metin": "var(--kat-tatli-metin)",
+      "golge": "var(--golge-tatli)",
+      "temsili_urun": "baklava"
+    },
+    {
+      "id": "dondurma-meyveli-cup",
+      "ad": {
+        "tr": "Dondurma (Meyveli Cup)",
+        "en": ""
+      },
+      "aciklama": {
+        "tr": "",
+        "en": ""
+      },
+      "renk": "#00A3FF",
+      "renk_degisken": "var(--kat-dondurma)",
+      "acik": "var(--kat-dondurma-acik)",
+      "metin": "var(--kat-dondurma-metin)",
+      "golge": "var(--golge-dondurma)",
+      "temsili_urun": "sade-dondurma"
+    },
+    {
+      "id": "kahvalti",
+      "ad": {
+        "tr": "Kahvaltı",
+        "en": ""
+      },
+      "aciklama": {
+        "tr": "",
+        "en": ""
+      },
       "renk": "#FFD850",
       "renk_degisken": "var(--kat-unlu)",
       "acik": "var(--kat-unlu-acik)",
       "metin": "var(--kat-unlu-metin)",
       "golge": "var(--golge-unlu)",
-      "aciklama": "Her sabah taze fırından",
-      "sayi": 5,
-      "temsili_urun": "simit"
+      "temsili_urun": "serpme-kahvalti"
+    },
+    {
+      "id": "mayali-atistirmalik",
+      "ad": {
+        "tr": "Mayalı & Atıştırmalık",
+        "en": ""
+      },
+      "aciklama": {
+        "tr": "",
+        "en": ""
+      },
+      "renk": "#FFD850",
+      "renk_degisken": "var(--kat-unlu)",
+      "acik": "var(--kat-unlu-acik)",
+      "metin": "var(--kat-unlu-metin)",
+      "golge": "var(--golge-unlu)",
+      "temsili_urun": "simit-acma"
+    },
+    {
+      "id": "mesrubatlar",
+      "ad": {
+        "tr": "Meşrubatlar",
+        "en": ""
+      },
+      "aciklama": {
+        "tr": "",
+        "en": ""
+      },
+      "renk": "#009EFF",
+      "renk_degisken": "var(--renk-acik-mavi)",
+      "acik": "var(--renk-plazma-100)",
+      "metin": "var(--renk-gece)",
+      "golge": "var(--golge-dondurma)",
+      "temsili_urun": "fuse-tea-kutu"
+    },
+    {
+      "id": "sicak-icecekler",
+      "ad": {
+        "tr": "Sıcak İçecekler",
+        "en": ""
+      },
+      "aciklama": {
+        "tr": "",
+        "en": ""
+      },
+      "renk": "#E3792F",
+      "renk_degisken": "var(--kat-tatli)",
+      "acik": "var(--kat-tatli-acik)",
+      "metin": "var(--kat-tatli-metin)",
+      "golge": "var(--golge-tatli)",
+      "temsili_urun": "sicak-sahlep"
+    },
+    {
+      "id": "yas-pastalar",
+      "ad": {
+        "tr": "Yaş Pastalar",
+        "en": ""
+      },
+      "aciklama": {
+        "tr": "",
+        "en": ""
+      },
+      "renk": "#E3792F",
+      "renk_degisken": "var(--kat-tatli)",
+      "acik": "var(--kat-tatli-acik)",
+      "metin": "var(--kat-tatli-metin)",
+      "golge": "var(--golge-tatli)",
+      "temsili_urun": "malaga"
+    },
+    {
+      "id": "kahveler",
+      "ad": {
+        "tr": "Kahveler",
+        "en": ""
+      },
+      "aciklama": {
+        "tr": "",
+        "en": ""
+      },
+      "renk": "#1A49AF",
+      "renk_degisken": "var(--renk-lacivert)",
+      "acik": "var(--renk-plazma-100)",
+      "metin": "var(--renk-gece)",
+      "golge": "var(--golge-2)",
+      "temsili_urun": "turk-kahvesi"
     }
   ],
   "rozetler": {
-    "yeni": { "ad": "Yeni", "zemin": "var(--renk-limon)", "metin": "var(--renk-gece)" },
-    "cok-satan": { "ad": "Çok Satan", "zemin": "var(--renk-mandalina)", "metin": "var(--renk-gece)" },
-    "vegan": { "ad": "Vegan", "zemin": "var(--renk-yesil-100)", "metin": "var(--renk-retro-yesil)" },
-    "glutensiz": { "ad": "Glutensiz", "zemin": "var(--renk-plazma-100)", "metin": "var(--renk-lacivert)" }
+    "yeni": {
+      "ad": {
+        "tr": "Yeni",
+        "en": ""
+      },
+      "zemin": "var(--renk-limon)",
+      "metin": "var(--renk-gece)"
+    },
+    "cok-satan": {
+      "ad": {
+        "tr": "Çok Satan",
+        "en": ""
+      },
+      "zemin": "var(--renk-mandalina)",
+      "metin": "var(--renk-gece)"
+    },
+    "vegan": {
+      "ad": {
+        "tr": "Vegan",
+        "en": ""
+      },
+      "zemin": "var(--renk-yesil-100)",
+      "metin": "var(--renk-retro-yesil)"
+    },
+    "glutensiz": {
+      "ad": {
+        "tr": "Glutensiz",
+        "en": ""
+      },
+      "zemin": "var(--renk-plazma-100)",
+      "metin": "var(--renk-lacivert)"
+    }
   },
   "urunler": [
     {
-      "id": "baklava",
-      "kat": "tatlilar",
-      "ad": "Fıstıklı Baklava",
-      "fiyat": 320,
-      "rozet": ["cok-satan"],
-      "kisa": "Kırk kat yufka, bol Antep fıstığı, hafif şerbet.",
-      "icindekiler": "Un, tereyağı, Antep fıstığı, şeker, su, limon tuzu.",
-      "alerjen": ["Gluten", "Süt", "Kabuklu yemiş"],
-      "porsiyon": [
-        ["4 dilim", 320],
-        ["8 dilim", 620],
-        ["1 kg", 1450]
-      ]
-    },
-    {
-      "id": "sutlac",
-      "kat": "tatlilar",
-      "ad": "Fırın Sütlaç",
-      "fiyat": 140,
-      "rozet": ["glutensiz"],
-      "kisa": "Toprak kapta, üstü közlenmiş, tarçın serpme.",
-      "icindekiler": "Süt, pirinç, şeker, pirinç unu, tarçın.",
-      "alerjen": ["Süt"],
-      "porsiyon": [
-        ["Kase", 140]
-      ]
-    },
-    {
-      "id": "profiterol",
-      "kat": "tatlilar",
-      "ad": "Profiterol",
-      "fiyat": 165,
-      "rozet": [],
-      "kisa": "Kremalı top toplar, bol akışkan bitter çikolata.",
-      "icindekiler": "Un, yumurta, tereyağı, süt, krema, bitter çikolata.",
-      "alerjen": ["Gluten", "Süt", "Yumurta", "Soya"],
-      "porsiyon": [
-        ["Kase", 165]
-      ]
-    },
-    {
-      "id": "kazandibi",
-      "kat": "tatlilar",
-      "ad": "Kazandibi",
-      "fiyat": 135,
-      "rozet": [],
-      "kisa": "Dibi tatlı tatlı yakılmış, ipeksi muhallebi.",
-      "icindekiler": "Süt, şeker, pirinç unu, nişasta, tarçın.",
-      "alerjen": ["Süt"],
-      "porsiyon": [
-        ["Dilim", 135]
-      ]
-    },
-    {
-      "id": "trilece",
-      "kat": "tatlilar",
-      "ad": "Trileçe",
-      "fiyat": 150,
-      "rozet": ["yeni"],
-      "kisa": "Üç sütle ıslanmış pandispanya, karamel tepesi.",
-      "icindekiler": "Un, yumurta, süt, krema, şeker, karamel.",
-      "alerjen": ["Gluten", "Süt", "Yumurta"],
-      "porsiyon": [
-        ["Dilim", 150]
-      ]
-    },
-    {
-      "id": "maras-dondurmasi",
-      "kat": "dondurmalar",
-      "ad": "Maraş Dondurması",
-      "fiyat": 120,
-      "rozet": ["cok-satan"],
-      "kisa": "Sakızlı, salepli, dövülerek uzayan klasik.",
-      "icindekiler": "Keçi sütü, şeker, salep, damla sakızı, Antep fıstığı.",
-      "alerjen": ["Süt", "Kabuklu yemiş"],
-      "porsiyon": [
-        ["150 g", 120],
-        ["250 g", 190]
-      ]
-    },
-    {
-      "id": "kulah-dondurma",
-      "kat": "dondurmalar",
-      "ad": "Külahta 3 Top",
+      "id": "cool-lime",
+      "kat": "kokteyl",
+      "ad": {
+        "tr": "COOL LIME",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "NANE VE MİSKET AROMALI BAZ",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
       "fiyat": 110,
       "rozet": [],
-      "kisa": "Çikolata, çilek, vanilya — çıtır külahta.",
-      "icindekiler": "Süt, şeker, krema, kakao, çilek, vanilya, külah (un).",
-      "alerjen": ["Gluten", "Süt"],
-      "porsiyon": [
-        ["2 top", 80],
-        ["3 top", 110],
-        ["4 top", 140]
-      ]
-    },
-    {
-      "id": "fistikli-dondurma",
-      "kat": "dondurmalar",
-      "ad": "Fıstıklı Dondurma",
-      "fiyat": 130,
-      "rozet": [],
-      "kisa": "Gerçek Antep fıstığı ezmesi, çıtır parçalar.",
-      "icindekiler": "Süt, şeker, Antep fıstığı ezmesi, salep.",
-      "alerjen": ["Süt", "Kabuklu yemiş"],
-      "porsiyon": [
-        ["2 top", 130],
-        ["3 top", 180]
-      ]
-    },
-    {
-      "id": "limon-sorbe",
-      "kat": "dondurmalar",
-      "ad": "Limonlu Sorbe",
-      "fiyat": 95,
-      "rozet": ["vegan", "glutensiz"],
-      "kisa": "Taze sıkım limon, nane yaprağı, buz gibi.",
-      "icindekiler": "Su, şeker, taze limon suyu, limon kabuğu, nane.",
       "alerjen": [],
-      "porsiyon": [
-        ["2 top", 95],
-        ["3 top", 135]
-      ]
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 110
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
     },
     {
-      "id": "cikolatali-dondurma",
-      "kat": "dondurmalar",
-      "ad": "Bitter Çikolatalı",
-      "fiyat": 105,
+      "id": "berry-hibiscus",
+      "kat": "kokteyl",
+      "ad": {
+        "tr": "BERRY HIBISCUS",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "HİBİSKUS VE ORMAN MEYVE AROMALI BAZ",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 110,
       "rozet": [],
-      "kisa": "%70 kakao, rendelenmiş çikolata yağmuru.",
-      "icindekiler": "Süt, şeker, kakao, bitter çikolata, krema.",
-      "alerjen": ["Süt", "Soya"],
-      "porsiyon": [
-        ["2 top", 105],
-        ["3 top", 150]
-      ]
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 110
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
     },
     {
-      "id": "simit",
-      "kat": "unlu",
-      "ad": "Susamlı Simit",
-      "fiyat": 25,
-      "rozet": ["cok-satan"],
-      "kisa": "Pekmeze batırılmış, bol susamlı, çıtır.",
-      "icindekiler": "Un, su, maya, tuz, üzüm pekmezi, susam.",
-      "alerjen": ["Gluten", "Susam"],
-      "porsiyon": [
-        ["Adet", 25]
-      ]
-    },
-    {
-      "id": "peynirli-pogaca",
-      "kat": "unlu",
-      "ad": "Peynirli Poğaça",
-      "fiyat": 35,
+      "id": "orange-mango",
+      "kat": "kokteyl",
+      "ad": {
+        "tr": "ORANGE & MANGO",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "PORTAKAL VE MANGO AROMALI BAZ",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 110,
       "rozet": [],
-      "kisa": "Yumuşacık hamur, beyaz peynir, çörek otu.",
-      "icindekiler": "Un, süt, yoğurt, tereyağı, beyaz peynir, maydanoz, yumurta, çörek otu.",
-      "alerjen": ["Gluten", "Süt", "Yumurta"],
-      "porsiyon": [
-        ["Adet", 35],
-        ["3 adet", 95]
-      ]
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 110
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
     },
     {
-      "id": "acma",
-      "kat": "unlu",
-      "ad": "Sade Açma",
+      "id": "blueberry",
+      "kat": "kokteyl",
+      "ad": {
+        "tr": "BLUEBERRY",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "YABAN MERSİNİ VE LİÇİ AROMALI BAZ",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 110,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 110
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "strawberry-acai",
+      "kat": "kokteyl",
+      "ad": {
+        "tr": "STRAWBERRY & ACAI",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "ÇİLEK VE ACAİ AROMALI BAZ",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 110,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 110
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "dragon-fruit-mango",
+      "kat": "kokteyl",
+      "ad": {
+        "tr": "DRAGON FRUIT & MANGO",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "EJDER MEYVESİ VE MANGO AROMALI BAZ",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 110,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 110
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "sikma-portakal",
+      "kat": "kokteyl",
+      "ad": {
+        "tr": "SIKMA PORTAKAL",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 120,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 120
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "limonata",
+      "kat": "kokteyl",
+      "ad": {
+        "tr": "LİMONATA",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 110,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 110
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "churcill",
+      "kat": "kokteyl",
+      "ad": {
+        "tr": "CHURCİLL",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 110,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 110
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "buzlac",
+      "kat": "kokteyl",
+      "ad": {
+        "tr": "BUZLAÇ",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 65,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 65
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "soguk-kahve",
+      "kat": "kokteyl",
+      "ad": {
+        "tr": "SOĞUK KAHVE",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 110,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 110
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "karadut-frozen",
+      "kat": "frozen-milkshake",
+      "ad": {
+        "tr": "KARADUT FROZEN",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 120,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 120
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "karpuz-frozen",
+      "kat": "frozen-milkshake",
+      "ad": {
+        "tr": "KARPUZ FROZEN",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 120,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 120
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "kavun-frozen",
+      "kat": "frozen-milkshake",
+      "ad": {
+        "tr": "KAVUN FROZEN",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 120,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 120
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "muz-frozen",
+      "kat": "frozen-milkshake",
+      "ad": {
+        "tr": "MUZ FROZEN",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 120,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 120
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "frambuaz-frozen",
+      "kat": "frozen-milkshake",
+      "ad": {
+        "tr": "FRAMBUAZ FROZEN",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 120,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 120
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "cilekli-milkshake",
+      "kat": "frozen-milkshake",
+      "ad": {
+        "tr": "ÇİLEKLİ MİLKSHAKE",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 120,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 120
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "cikolatali-milkshake",
+      "kat": "frozen-milkshake",
+      "ad": {
+        "tr": "ÇİKOLATALI MİLKSHAKE",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 120,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 120
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "muz-milkshake",
+      "kat": "frozen-milkshake",
+      "ad": {
+        "tr": "MUZ MİLKSHAKE",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 120,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 120
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "piramit",
+      "kat": "serbetli-tatlilar",
+      "ad": {
+        "tr": "PİRAMİT",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "Mısır Piramitleri kadar büyüleyici",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 190,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "tam-porsiyon",
+          "ad": {
+            "tr": "Tam porsiyon",
+            "en": ""
+          },
+          "fiyat": 190
+        },
+        {
+          "id": "az-porsiyon",
+          "ad": {
+            "tr": "Az porsiyon",
+            "en": ""
+          },
+          "fiyat": 120
+        }
+      ],
+      "ekstra": [
+        {
+          "id": "ilave-dondurma",
+          "ad": {
+            "tr": "İlave dondurma",
+            "en": ""
+          },
+          "fiyat": 90
+        }
+      ],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "midye",
+      "kat": "serbetli-tatlilar",
+      "ad": {
+        "tr": "MİDYE",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "Bu midye denizden çıkmadı",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 190,
+      "rozet": [],
+      "alerjen": [
+        "sut",
+        "kabuklu"
+      ],
+      "boy": [
+        {
+          "id": "tam-porsiyon",
+          "ad": {
+            "tr": "Tam porsiyon",
+            "en": ""
+          },
+          "fiyat": 190
+        },
+        {
+          "id": "az-porsiyon",
+          "ad": {
+            "tr": "Az porsiyon",
+            "en": ""
+          },
+          "fiyat": 120
+        }
+      ],
+      "ekstra": [
+        {
+          "id": "ilave-maras-dondurmasi",
+          "ad": {
+            "tr": "İlave Maraş dondurması",
+            "en": ""
+          },
+          "fiyat": 90
+        }
+      ],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "saray-sarma",
+      "kat": "serbetli-tatlilar",
+      "ad": {
+        "tr": "SARAY SARMA",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "HALİS ellerden saray lezzeti",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 190,
+      "rozet": [],
+      "alerjen": [
+        "kabuklu"
+      ],
+      "boy": [
+        {
+          "id": "tam-porsiyon",
+          "ad": {
+            "tr": "Tam porsiyon",
+            "en": ""
+          },
+          "fiyat": 190
+        },
+        {
+          "id": "az-porsiyon",
+          "ad": {
+            "tr": "Az porsiyon",
+            "en": ""
+          },
+          "fiyat": 120
+        }
+      ],
+      "ekstra": [
+        {
+          "id": "ilave-maras-dondurmasi",
+          "ad": {
+            "tr": "İlave Maraş dondurması",
+            "en": ""
+          },
+          "fiyat": 90
+        }
+      ],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "havuc-dilimi",
+      "kat": "serbetli-tatlilar",
+      "ad": {
+        "tr": "HAVUÇ DİLİMİ",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "Tam bir klasik...",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 190,
+      "rozet": [],
+      "alerjen": [
+        "kabuklu"
+      ],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 190
+        }
+      ],
+      "ekstra": [
+        {
+          "id": "ilave-dondurma",
+          "ad": {
+            "tr": "İlave Dondurma",
+            "en": ""
+          },
+          "fiyat": 90
+        }
+      ],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "yesil-yaprak",
+      "kat": "serbetli-tatlilar",
+      "ad": {
+        "tr": "YEŞİL YAPRAK",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "Eşsiz, nazik, hafif HALİS lezzet",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 220,
+      "rozet": [],
+      "alerjen": [
+        "sut",
+        "kabuklu"
+      ],
+      "boy": [
+        {
+          "id": "tam-porsiyon",
+          "ad": {
+            "tr": "Tam porsiyon",
+            "en": ""
+          },
+          "fiyat": 220
+        },
+        {
+          "id": "az-porsiyon",
+          "ad": {
+            "tr": "Az porsiyon",
+            "en": ""
+          },
+          "fiyat": 150
+        }
+      ],
+      "ekstra": [
+        {
+          "id": "ilave-maras-dondurmasi",
+          "ad": {
+            "tr": "İlave Maraş dondurması",
+            "en": ""
+          },
+          "fiyat": 90
+        }
+      ],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "yesil-muhur",
+      "kat": "serbetli-tatlilar",
+      "ad": {
+        "tr": "YEŞİL MÜHÜR",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "HALİS lezzet mührü",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 220,
+      "rozet": [],
+      "alerjen": [
+        "kabuklu"
+      ],
+      "boy": [
+        {
+          "id": "tam-porsiyon",
+          "ad": {
+            "tr": "Tam porsiyon",
+            "en": ""
+          },
+          "fiyat": 220
+        },
+        {
+          "id": "az-porsiyon",
+          "ad": {
+            "tr": "Az porsiyon",
+            "en": ""
+          },
+          "fiyat": 150
+        }
+      ],
+      "ekstra": [
+        {
+          "id": "ilave-maras-dondurmasi",
+          "ad": {
+            "tr": "İlave Maraş dondurması",
+            "en": ""
+          },
+          "fiyat": 90
+        }
+      ],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "karisik-tatli",
+      "kat": "serbetli-tatlilar",
+      "ad": {
+        "tr": "KARIŞIK TATLI",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "Hepisinin dadına bahım dersen",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 220,
+      "rozet": [],
+      "alerjen": [
+        "kabuklu"
+      ],
+      "boy": [
+        {
+          "id": "tam-porsiyon",
+          "ad": {
+            "tr": "Tam porsiyon",
+            "en": ""
+          },
+          "fiyat": 220
+        },
+        {
+          "id": "az-porsiyon",
+          "ad": {
+            "tr": "Az porsiyon",
+            "en": ""
+          },
+          "fiyat": 150
+        }
+      ],
+      "ekstra": [
+        {
+          "id": "ilave-maras-dondurmasi-100",
+          "ad": {
+            "tr": "İlave Maraş dondurması",
+            "en": ""
+          },
+          "fiyat": 100
+        }
+      ],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "sobiyet",
+      "kat": "serbetli-tatlilar",
+      "ad": {
+        "tr": "ŞÖBİYET",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "Bol Fıstıklı, Tereyağlı, Kaymaklı",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 190,
+      "rozet": [],
+      "alerjen": [
+        "sut",
+        "kabuklu"
+      ],
+      "boy": [
+        {
+          "id": "tam-porsiyon",
+          "ad": {
+            "tr": "Tam porsiyon",
+            "en": ""
+          },
+          "fiyat": 190
+        },
+        {
+          "id": "az-porsiyon",
+          "ad": {
+            "tr": "Az porsiyon",
+            "en": ""
+          },
+          "fiyat": 120
+        }
+      ],
+      "ekstra": [
+        {
+          "id": "ilave-dondurma",
+          "ad": {
+            "tr": "İlave Dondurma",
+            "en": ""
+          },
+          "fiyat": 90
+        }
+      ],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "baklava",
+      "kat": "serbetli-tatlilar",
+      "ad": {
+        "tr": "BAKLAVA",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "30 yıllık tecrübesiyle HALİS lezzet...",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 160,
+      "rozet": [],
+      "alerjen": [
+        "yumurta",
+        "kabuklu"
+      ],
+      "boy": [
+        {
+          "id": "tam-porsiyon",
+          "ad": {
+            "tr": "Tam porsiyon",
+            "en": ""
+          },
+          "fiyat": 160
+        },
+        {
+          "id": "az-porsiyon",
+          "ad": {
+            "tr": "Az porsiyon",
+            "en": ""
+          },
+          "fiyat": 100
+        }
+      ],
+      "ekstra": [
+        {
+          "id": "ilave-dondurma",
+          "ad": {
+            "tr": "İlave Dondurma",
+            "en": ""
+          },
+          "fiyat": 90
+        }
+      ],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "bulbul-yuvasi",
+      "kat": "serbetli-tatlilar",
+      "ad": {
+        "tr": "BÜLBÜL YUVASI",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "İnce hamur şeritlerinin yuva formunda sarılmasıyla. hazırlanan hafif bir lezzet şöleni",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 160,
+      "rozet": [],
+      "alerjen": [
+        "kabuklu"
+      ],
+      "boy": [
+        {
+          "id": "tam-porsiyon",
+          "ad": {
+            "tr": "Tam porsiyon",
+            "en": ""
+          },
+          "fiyat": 160
+        },
+        {
+          "id": "az-porsiyon",
+          "ad": {
+            "tr": "Az porsiyon",
+            "en": ""
+          },
+          "fiyat": 100
+        }
+      ],
+      "ekstra": [
+        {
+          "id": "ilave-dondurma",
+          "ad": {
+            "tr": "İlave Dondurma",
+            "en": ""
+          },
+          "fiyat": 90
+        }
+      ],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "kose",
+      "kat": "serbetli-tatlilar",
+      "ad": {
+        "tr": "KÖSE",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "Kendi küçük Lezzeti büyük",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 190,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "tam-porsiyon",
+          "ad": {
+            "tr": "Tam porsiyon",
+            "en": ""
+          },
+          "fiyat": 190
+        },
+        {
+          "id": "az-porsiyon",
+          "ad": {
+            "tr": "Az porsiyon",
+            "en": ""
+          },
+          "fiyat": 120
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "yesil-burma",
+      "kat": "serbetli-tatlilar",
+      "ad": {
+        "tr": "YEŞİL BURMA",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "Antep fıstığı ve tereyağın mükemmel vals'i",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 220,
+      "rozet": [],
+      "alerjen": [
+        "kabuklu"
+      ],
+      "boy": [
+        {
+          "id": "tam-porsiyon",
+          "ad": {
+            "tr": "Tam porsiyon",
+            "en": ""
+          },
+          "fiyat": 220
+        },
+        {
+          "id": "az-porsiyon",
+          "ad": {
+            "tr": "Az porsiyon",
+            "en": ""
+          },
+          "fiyat": 150
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "dilber-dudagi",
+      "kat": "serbetli-tatlilar",
+      "ad": {
+        "tr": "DİLBER DUDAĞI",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "Dilberin evi barkı yok ama tatlısı var.",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 190,
+      "rozet": [],
+      "alerjen": [
+        "kabuklu"
+      ],
+      "boy": [
+        {
+          "id": "tam-porsiyon",
+          "ad": {
+            "tr": "Tam porsiyon",
+            "en": ""
+          },
+          "fiyat": 190
+        },
+        {
+          "id": "az-porsiyon",
+          "ad": {
+            "tr": "Az porsiyon",
+            "en": ""
+          },
+          "fiyat": 120
+        }
+      ],
+      "ekstra": [
+        {
+          "id": "ilave-dondurma",
+          "ad": {
+            "tr": "İlave Dondurma",
+            "en": ""
+          },
+          "fiyat": 90
+        }
+      ],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "ozel-baklava",
+      "kat": "serbetli-tatlilar",
+      "ad": {
+        "tr": "ÖZEL BAKLAVA",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "Sizi özel hissettirecek kare dilimler...",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 190,
+      "rozet": [],
+      "alerjen": [
+        "kabuklu"
+      ],
+      "boy": [
+        {
+          "id": "tam-porsiyon",
+          "ad": {
+            "tr": "Tam porsiyon",
+            "en": ""
+          },
+          "fiyat": 190
+        },
+        {
+          "id": "az-porsiyon",
+          "ad": {
+            "tr": "Az porsiyon",
+            "en": ""
+          },
+          "fiyat": 120
+        }
+      ],
+      "ekstra": [
+        {
+          "id": "ilave-dondurma",
+          "ad": {
+            "tr": "İlave Dondurma",
+            "en": ""
+          },
+          "fiyat": 90
+        }
+      ],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "fistikli-kivrim",
+      "kat": "serbetli-tatlilar",
+      "ad": {
+        "tr": "FISTIKLI KIVRIM",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "incecik yufkalar arasında gizlenen fıstık ve tereyağı ile",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 190,
+      "rozet": [],
+      "alerjen": [
+        "kabuklu"
+      ],
+      "boy": [
+        {
+          "id": "tam-porsiyon",
+          "ad": {
+            "tr": "Tam porsiyon",
+            "en": ""
+          },
+          "fiyat": 190
+        },
+        {
+          "id": "az-porsiyon",
+          "ad": {
+            "tr": "Az porsiyon",
+            "en": ""
+          },
+          "fiyat": 120
+        }
+      ],
+      "ekstra": [
+        {
+          "id": "ilave-dondurma",
+          "ad": {
+            "tr": "İlave Dondurma",
+            "en": ""
+          },
+          "fiyat": 90
+        }
+      ],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "billuriye",
+      "kat": "serbetli-tatlilar",
+      "ad": {
+        "tr": "BİLLURİYE",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "Hasır kadayıfı ve fıstığıyla billur lezzet...",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 190,
+      "rozet": [],
+      "alerjen": [
+        "kabuklu"
+      ],
+      "boy": [
+        {
+          "id": "tam-porsiyon",
+          "ad": {
+            "tr": "Tam porsiyon",
+            "en": ""
+          },
+          "fiyat": 190
+        },
+        {
+          "id": "az-porsiyon",
+          "ad": {
+            "tr": "Az porsiyon",
+            "en": ""
+          },
+          "fiyat": 140
+        }
+      ],
+      "ekstra": [
+        {
+          "id": "ilave-dondurma",
+          "ad": {
+            "tr": "İlave Dondurma",
+            "en": ""
+          },
+          "fiyat": 90
+        }
+      ],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "burma-kadayif",
+      "kat": "serbetli-tatlilar",
+      "ad": {
+        "tr": "BURMA KADAYIF",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "Özenle sarılmış hasır kadayıf ve bol fıstığıyla...",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 190,
+      "rozet": [],
+      "alerjen": [
+        "kabuklu"
+      ],
+      "boy": [
+        {
+          "id": "tam-porsiyon",
+          "ad": {
+            "tr": "Tam porsiyon",
+            "en": ""
+          },
+          "fiyat": 190
+        },
+        {
+          "id": "az-porsiyon",
+          "ad": {
+            "tr": "Az porsiyon",
+            "en": ""
+          },
+          "fiyat": 140
+        }
+      ],
+      "ekstra": [
+        {
+          "id": "ilave-maras-dondurmasi",
+          "ad": {
+            "tr": "İlave Maraş dondurması",
+            "en": ""
+          },
+          "fiyat": 90
+        }
+      ],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "cevizli-kivrim",
+      "kat": "serbetli-tatlilar",
+      "ad": {
+        "tr": "CEVİZLİ KIVRIM",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "İncecik hamur kıvrımları arasında aromatik ceviziyle",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 190,
+      "rozet": [],
+      "alerjen": [
+        "kabuklu"
+      ],
+      "boy": [
+        {
+          "id": "tam-porsiyon",
+          "ad": {
+            "tr": "Tam porsiyon",
+            "en": ""
+          },
+          "fiyat": 160
+        },
+        {
+          "id": "az-porsiyon",
+          "ad": {
+            "tr": "Az porsiyon",
+            "en": ""
+          },
+          "fiyat": 100
+        }
+      ],
+      "ekstra": [
+        {
+          "id": "ilave-maras-dondurmasi",
+          "ad": {
+            "tr": "İlave Maraş dondurması",
+            "en": ""
+          },
+          "fiyat": 90
+        }
+      ],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "nostalji",
+      "kat": "serbetli-tatlilar",
+      "ad": {
+        "tr": "NOSTALJİ",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "Çocukluğunuzun HALİS lezzet şöleni",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 160,
+      "rozet": [],
+      "alerjen": [
+        "kabuklu"
+      ],
+      "boy": [
+        {
+          "id": "tam-porsiyon",
+          "ad": {
+            "tr": "Tam porsiyon",
+            "en": ""
+          },
+          "fiyat": 160
+        },
+        {
+          "id": "az-porsiyon",
+          "ad": {
+            "tr": "Az porsiyon",
+            "en": ""
+          },
+          "fiyat": 100
+        }
+      ],
+      "ekstra": [
+        {
+          "id": "ilave-maras-dondurmasi",
+          "ad": {
+            "tr": "İlave Maraş dondurması",
+            "en": ""
+          },
+          "fiyat": 90
+        }
+      ],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "kadayif",
+      "kat": "serbetli-tatlilar",
+      "ad": {
+        "tr": "KADAYIF",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "Saray mutfağından gelen lezzet",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 160,
+      "rozet": [],
+      "alerjen": [
+        "kabuklu"
+      ],
+      "boy": [
+        {
+          "id": "tam-porsiyon",
+          "ad": {
+            "tr": "Tam porsiyon",
+            "en": ""
+          },
+          "fiyat": 160
+        },
+        {
+          "id": "az-porsiyon",
+          "ad": {
+            "tr": "Az porsiyon",
+            "en": ""
+          },
+          "fiyat": 100
+        }
+      ],
+      "ekstra": [
+        {
+          "id": "ilave-maras-dondurmasi",
+          "ad": {
+            "tr": "İlave Maraş dondurması",
+            "en": ""
+          },
+          "fiyat": 90
+        }
+      ],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "peynirli-kunefe",
+      "kat": "serbetli-tatlilar",
+      "ad": {
+        "tr": "PEYNİRLİ KÜNEFE",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "Dünyanın en güzel tatlısına HALİS bir dokunuş. Muz ve Süt eşliğinde. Çoklu Servisimiz sadece HALİS GARDEN şubemizde",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 200,
+      "rozet": [],
+      "alerjen": [
+        "sut",
+        "kabuklu"
+      ],
+      "boy": [
+        {
+          "id": "tek-kisilik",
+          "ad": {
+            "tr": "Tek kişilik",
+            "en": ""
+          },
+          "fiyat": 190
+        }
+      ],
+      "ekstra": [
+        {
+          "id": "ilave-maras-dondurmasi",
+          "ad": {
+            "tr": "İlave Maraş dondurması",
+            "en": ""
+          },
+          "fiyat": 90
+        }
+      ],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "sade-dondurma",
+      "kat": "dondurma-meyveli-cup",
+      "ad": {
+        "tr": "SADE DONDURMA",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "HALİS MARAŞ dövme dondurma",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 150,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "tam-porsiyon",
+          "ad": {
+            "tr": "Tam porsiyon",
+            "en": ""
+          },
+          "fiyat": 150
+        },
+        {
+          "id": "az-porsiyon",
+          "ad": {
+            "tr": "Az porsiyon",
+            "en": ""
+          },
+          "fiyat": 90
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "meyveli-cup",
+      "kat": "dondurma-meyveli-cup",
+      "ad": {
+        "tr": "MEYVELİ CUP",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "Kendi meyvesinden gelen lezzet",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 200,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "tam-porsiyon",
+          "ad": {
+            "tr": "Tam porsiyon",
+            "en": ""
+          },
+          "fiyat": 200
+        },
+        {
+          "id": "az-porsiyon",
+          "ad": {
+            "tr": "Az porsiyon",
+            "en": ""
+          },
+          "fiyat": 100
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "cikolatali-porsiyon",
+      "kat": "dondurma-meyveli-cup",
+      "ad": {
+        "tr": "ÇİKOLATALI PORSİYON",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "Gerçek çikolata lezzeti, HALİS farkıyla...",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 100,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "tam-porsiyon",
+          "ad": {
+            "tr": "Tam porsiyon",
+            "en": ""
+          },
+          "fiyat": 200
+        },
+        {
+          "id": "az-porsiyon",
+          "ad": {
+            "tr": "Az porsiyon",
+            "en": ""
+          },
+          "fiyat": 100
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "serpme-kahvalti",
+      "kat": "kahvalti",
+      "ad": {
+        "tr": "SERPME KAHVALTI (Halis Garden şubemizde rezervasyon ile)",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "2 Çeşit peynir, zeytin, domates, salatalık, kızartma tabağı, sigara böreği, mantar sote, çikolata, reçel, bal, tereyağ, salam, sucuk, haşlanmış yumurta, sebzeli omlet, yeşillik",
+        "en": ""
+      },
+      "fiyat": 250,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 250
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "kahvalti-tabagi",
+      "kat": "kahvalti",
+      "ad": {
+        "tr": "KAHVALTI TABAĞI (Halis Garden şubemizde rezervasyon ile)",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 140,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 140
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "meyve-tabagi",
+      "kat": "mayali-atistirmalik",
+      "ad": {
+        "tr": "MEYVE TABAĞI",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 150,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 150
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "kuru-pasta-pors",
+      "kat": "mayali-atistirmalik",
+      "ad": {
+        "tr": "KURU PASTA PORS.",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "TUZLU & ŞEKERLİ",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 100,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 100
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "tarhana",
+      "kat": "mayali-atistirmalik",
+      "ad": {
+        "tr": "TARHANA",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 100,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 100
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "cerez",
+      "kat": "mayali-atistirmalik",
+      "ad": {
+        "tr": "ÇEREZ",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 150,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 150
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "porsiyon-su-boregi",
+      "kat": "mayali-atistirmalik",
+      "ad": {
+        "tr": "PORSİYON SU BÖREĞİ",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 80,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 80
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "simit-acma",
+      "kat": "mayali-atistirmalik",
+      "ad": {
+        "tr": "SİMİT & AÇMA",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 20,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 20
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "pogaca-cesitl",
+      "kat": "mayali-atistirmalik",
+      "ad": {
+        "tr": "POĞAÇA ÇEŞİTL.",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 20,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 20
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "mini-pogaca",
+      "kat": "mayali-atistirmalik",
+      "ad": {
+        "tr": "MİNİ POĞAÇA",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 5,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 5
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "kucuk-su",
+      "kat": "mesrubatlar",
+      "ad": {
+        "tr": "KÜÇÜK SU",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 20,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 20
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "coco-cola-kutu",
+      "kat": "mesrubatlar",
+      "ad": {
+        "tr": "COCO COLA KUTU",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 80,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 80
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "fanta-kutu",
+      "kat": "mesrubatlar",
+      "ad": {
+        "tr": "FANTA KUTU",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 80,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 80
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "fuse-tea-kutu",
+      "kat": "mesrubatlar",
+      "ad": {
+        "tr": "FUSE TEA KUTU",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "Karpuzlu, mango, şeftali, vişneli.",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 80,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 80
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "redbul",
+      "kat": "mesrubatlar",
+      "ad": {
+        "tr": "REDBUL",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 100,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 100
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "meyveli-soda",
+      "kat": "mesrubatlar",
+      "ad": {
+        "tr": "MEYVELİ SODA",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "ÇİLEK KARPUZ,LİMONLU,PORTAKALLI,KARADUTLU,ELMALI",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
       "fiyat": 30,
       "rozet": [],
-      "kisa": "Tereyağlı, pamuk gibi, parlak yumurtalı.",
-      "icindekiler": "Un, süt, tereyağı, şeker, maya, yumurta.",
-      "alerjen": ["Gluten", "Süt", "Yumurta"],
-      "porsiyon": [
-        ["Adet", 30]
-      ]
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 30
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
     },
     {
-      "id": "kurabiye",
-      "kat": "unlu",
-      "ad": "Karışık Kurabiye",
-      "fiyat": 180,
+      "id": "sade-soda",
+      "kat": "mesrubatlar",
+      "ad": {
+        "tr": "SADE SODA",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 25,
       "rozet": [],
-      "kisa": "Reçelli ve çikolatalı un kurabiyeleri.",
-      "icindekiler": "Un, tereyağı, pudra şekeri, vişne reçeli, bitter çikolata.",
-      "alerjen": ["Gluten", "Süt", "Soya"],
-      "porsiyon": [
-        ["250 g", 180],
-        ["500 g", 340]
-      ]
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 25
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
     },
     {
-      "id": "tahinli-corek",
-      "kat": "unlu",
-      "ad": "Tahinli Çörek",
+      "id": "meyve-suyu-200ml",
+      "kat": "mesrubatlar",
+      "ad": {
+        "tr": "MEYVE SUYU 200ml",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "Şeftali, vişne ve karışık.",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 25,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 25
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "bardak-su",
+      "kat": "mesrubatlar",
+      "ad": {
+        "tr": "BARDAK SU",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 5,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 5
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "cappy-atom",
+      "kat": "mesrubatlar",
+      "ad": {
+        "tr": "CAPPY ATOM",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 80,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 80
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "cappy",
+      "kat": "mesrubatlar",
+      "ad": {
+        "tr": "CAPPY",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "Portakal, karışık, kayısı",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 80,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 80
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "cay",
+      "kat": "sicak-icecekler",
+      "ad": {
+        "tr": "ÇAY",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "TÜRK ÇAYI",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 15,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 15
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "fincan-cay",
+      "kat": "sicak-icecekler",
+      "ad": {
+        "tr": "FİNCAN ÇAY",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 25,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 25
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "kusburnu",
+      "kat": "sicak-icecekler",
+      "ad": {
+        "tr": "KUŞBURNU",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 35,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 35
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "sicak-sahlep",
+      "kat": "sicak-icecekler",
+      "ad": {
+        "tr": "SICAK SAHLEP",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 150,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 150
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "nane-limon",
+      "kat": "sicak-icecekler",
+      "ad": {
+        "tr": "NANE LİMON",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
       "fiyat": 55,
-      "rozet": ["yeni", "vegan"],
-      "kisa": "Kat kat burgu, bol tahin, susam tepesi.",
-      "icindekiler": "Un, su, tahin, şeker, ayçiçek yağı, maya, susam.",
-      "alerjen": ["Gluten", "Susam"],
-      "porsiyon": [
-        ["Adet", 55]
-      ]
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 55
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "yesil-cay",
+      "kat": "sicak-icecekler",
+      "ad": {
+        "tr": "YEŞİL ÇAY",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 40,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 40
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "adacayi",
+      "kat": "sicak-icecekler",
+      "ad": {
+        "tr": "ADAÇAYI",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 40,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 40
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "duble-cay",
+      "kat": "sicak-icecekler",
+      "ad": {
+        "tr": "DUBLE ÇAY",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 25,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 25
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "orman-meyveli-cay",
+      "kat": "sicak-icecekler",
+      "ad": {
+        "tr": "ORMAN MEYVELİ ÇAY",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 45,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 45
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "kis-cayi",
+      "kat": "sicak-icecekler",
+      "ad": {
+        "tr": "KIŞ ÇAYI",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 100,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 100
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "papatya",
+      "kat": "sicak-icecekler",
+      "ad": {
+        "tr": "PAPATYA",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 45,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 45
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "ihlamur",
+      "kat": "sicak-icecekler",
+      "ad": {
+        "tr": "IHLAMUR",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 45,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 45
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "termos-cay",
+      "kat": "sicak-icecekler",
+      "ad": {
+        "tr": "TERMOS ÇAY",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 90,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 90
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "malaga",
+      "kat": "yas-pastalar",
+      "ad": {
+        "tr": "MALAGA",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "MUZLU ÇİKOLATALI PASTA",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 200,
+      "rozet": [],
+      "alerjen": [
+        "sut",
+        "kabuklu"
+      ],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 200
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "ekler",
+      "kat": "yas-pastalar",
+      "ad": {
+        "tr": "EKLER",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 15,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "adet",
+          "ad": {
+            "tr": "Adet",
+            "en": ""
+          },
+          "fiyat": 15
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "ugur-bocegi-ve-civciv",
+      "kat": "yas-pastalar",
+      "ad": {
+        "tr": "UĞUR BÖCEĞİ VE CİVCİV",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "Çikolatalı ve Meyveli",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 200,
+      "rozet": [],
+      "alerjen": [
+        "sut"
+      ],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 200
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "sansebastian",
+      "kat": "yas-pastalar",
+      "ad": {
+        "tr": "SANSEBASTİAN",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 200,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 200
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "meyveli-sarlo",
+      "kat": "yas-pastalar",
+      "ad": {
+        "tr": "MEYVELİ ŞARLO",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "MEYVELİ",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 200,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 200
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "cheesecake",
+      "kat": "yas-pastalar",
+      "ad": {
+        "tr": "CHEESECAKE",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "Karamelli, Frambuazlı, Limonlu",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 200,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 200
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "firansiz-pastalar",
+      "kat": "yas-pastalar",
+      "ad": {
+        "tr": "FIRANSIZ PASTALAR",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "Fıstık, Yaban mersini, Badem vs",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 200,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 200
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "mause-pasta",
+      "kat": "yas-pastalar",
+      "ad": {
+        "tr": "MAUSE PASTA",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 200,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 200
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "mozaik",
+      "kat": "yas-pastalar",
+      "ad": {
+        "tr": "MOZAİK",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 200,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 200
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "fistik-ruyasi",
+      "kat": "yas-pastalar",
+      "ad": {
+        "tr": "FISTIK RÜYASI",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 200,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 200
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "ibiza",
+      "kat": "yas-pastalar",
+      "ad": {
+        "tr": "İBİZA",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "Muz ve Çikolatalı",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 200,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 200
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "lotus",
+      "kat": "yas-pastalar",
+      "ad": {
+        "tr": "LOTUS",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 200,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 200
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "tiramisu",
+      "kat": "yas-pastalar",
+      "ad": {
+        "tr": "TİRAMİSU",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 200,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 200
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "osmanli-kahvesi",
+      "kat": "kahveler",
+      "ad": {
+        "tr": "OSMANLI KAHVESİ",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 100,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 100
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "turk-kahvesi",
+      "kat": "kahveler",
+      "ad": {
+        "tr": "TÜRK KAHVESİ",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 100,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 100
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "filtre-kahve",
+      "kat": "kahveler",
+      "ad": {
+        "tr": "FİLTRE KAHVE",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 100,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 100
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "soguk-kahve-116697",
+      "kat": "kahveler",
+      "ad": {
+        "tr": "SOĞUK KAHVE",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 100,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 100
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "coffee",
+      "kat": "kahveler",
+      "ad": {
+        "tr": "COFFEE",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 100,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 100
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "coffe-milk",
+      "kat": "kahveler",
+      "ad": {
+        "tr": "COFFE MİLK",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 100,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 100
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "espresso",
+      "kat": "kahveler",
+      "ad": {
+        "tr": "ESPRESSO",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 100,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 100
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "cappucino",
+      "kat": "kahveler",
+      "ad": {
+        "tr": "CAPPUCİNO",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 100,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 100
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "soguk-kahve-283614",
+      "kat": "kahveler",
+      "ad": {
+        "tr": "SOĞUK KAHVE",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 110,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 110
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "milk-chocolate",
+      "kat": "kahveler",
+      "ad": {
+        "tr": "MİLK CHOCOLATE",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 100,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 100
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "mocha",
+      "kat": "kahveler",
+      "ad": {
+        "tr": "MOCHA",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 100,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 100
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "latte",
+      "kat": "kahveler",
+      "ad": {
+        "tr": "LATTE",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 100,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 100
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "menengic-kahvesi",
+      "kat": "kahveler",
+      "ad": {
+        "tr": "MENENGİÇ KAHVESİ",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 120,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 120
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "damla-sakizli-kahve",
+      "kat": "kahveler",
+      "ad": {
+        "tr": "DAMLA SAKIZLI KAHVE",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 100,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 100
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "americano",
+      "kat": "kahveler",
+      "ad": {
+        "tr": "AMERİCANO",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 100,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 100
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
+    },
+    {
+      "id": "dibek-kahvesi",
+      "kat": "kahveler",
+      "ad": {
+        "tr": "DİBEK KAHVESİ",
+        "en": ""
+      },
+      "kisa": {
+        "tr": "",
+        "en": ""
+      },
+      "icindekiler": {
+        "tr": "",
+        "en": ""
+      },
+      "fiyat": 100,
+      "rozet": [],
+      "alerjen": [],
+      "boy": [
+        {
+          "id": "porsiyon",
+          "ad": {
+            "tr": "Porsiyon",
+            "en": ""
+          },
+          "fiyat": 100
+        }
+      ],
+      "ekstra": [],
+      "gorsel": "./img/products/_yok.webp",
+      "tukendi": false,
+      "gizli": false,
+      "ornek_fiyat": false
     }
   ]
 }

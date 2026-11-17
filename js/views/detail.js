@@ -3,8 +3,11 @@
  * Parallax kaydırma, porsiyon ve adet seçimi, ürünler arası yatay swipe ve ters geçiş.
  */
 
-import { renderBadge, showToast } from '../components.js';
-import { getProduct, getCategory, getProductsByCategory, formatTL, getProductImage } from '../data.js';
+import { renderBadge, showToast, renderLangButton, renderTukendiBadge } from '../components.js';
+import {
+  getProduct, getCategory, getProductsByCategory, formatTL, getProductImage,
+  loc, t, getProductSizes, getProductExtras, computeItemPrice, getAllergenLabel
+} from '../data.js';
 import { ik, DEKO, dekoEl } from '../icons.js';
 import { sound } from '../audio.js';
 import { theme } from '../theme.js';
@@ -12,17 +15,24 @@ import { cart } from '../cart.js';
 import { animateButtonPress, transitionDetailToPrevious } from '../transitions.js';
 
 export function renderDetailView(container, productId = 'baklava', { onNavigateBack, onSwitchProduct }) {
-  const product = getProduct(productId) || getProduct('baklava');
-  const category = getCategory(product.kat);
+  const product = getProduct(productId);
+  if (!product || product.gizli) {
+    container.innerHTML = `<div class="ekran" style="padding:40px 24px;text-align:center">
+      <h1 class="h1">${t('gizli_urun')}</h1>
+      <button class="buton ikincil" style="margin-top:20px" data-action="geri">${t('geri')}</button>
+    </div>`;
+    return;
+  }
+  const category = getCategory(product.kat) || { ad: '', renk: '#1A49AF', metin: '#0F1B3D', acik: 'var(--yuzey-2)' };
   const categoryProducts = getProductsByCategory(product.kat);
   const currentIndex = categoryProducts.findIndex(p => p.id === product.id);
+  const sizes = getProductSizes(product);
+  const extras = getProductExtras(product);
+  const ad = loc(product.ad);
 
-  // Başlangıç porsiyonu ve adedi
   let selectedPortionIndex = 0;
   let quantity = 1;
-
-  const currentPortion = product.porsiyon[selectedPortionIndex] || [product.ad, product.fiyat];
-  const unitPrice = currentPortion[1];
+  const unitPrice = sizes[0] ? sizes[0].fiyat : product.fiyat;
   const totalPrice = unitPrice * quantity;
 
   // Dekorasyonlar
@@ -36,16 +46,31 @@ export function renderDetailView(container, productId = 'baklava', { onNavigateB
 
   const portionsHtml = `
     <div class="segment" id="porsiyonSegment">
-      ${product.porsiyon.map((p, idx) => `
-        <button class="${idx === selectedPortionIndex ? 'secili' : ''}" data-idx="${idx}">
-          ${p[0]}
-          <small>${formatTL(p[1])}</small>
+      ${sizes.map((p, idx) => `
+        <button class="${idx === selectedPortionIndex ? 'secili' : ''}" data-idx="${idx}" data-boy="${p.id}">
+          ${loc(p.ad)}
+          <small>${formatTL(p.fiyat)}</small>
         </button>
       `).join('')}
     </div>
   `;
 
-  const allergens = product.alerjen && product.alerjen.length ? product.alerjen : ['Alerjen içermez'];
+  const extrasHtml = extras.length ? `
+        <div class="kademe" style="margin-top:16px">
+          <div class="etiket" style="color:var(--metin-2); margin-bottom:8px">${t('ekstra')}</div>
+          <div class="ekstra-liste" id="ekstraListe">
+            ${extras.map(e => `
+              <label class="ekstra-satir">
+                <input type="checkbox" data-ekstra="${e.id}" value="${e.id}">
+                <span>${loc(e.ad)}</span>
+                <span class="fiyat kucuk-f duz">+${formatTL(e.fiyat)}</span>
+              </label>
+            `).join('')}
+          </div>
+        </div>` : '';
+
+  const allergenIds = product.alerjen && product.alerjen.length ? product.alerjen : [];
+  const allergenLabels = allergenIds.length ? allergenIds.map(getAllergenLabel) : [t('alerjen_yok')];
 
   const html = `
     <div class="ekran detay-ekran" data-ekran="detay" style="background:${category.renk}">
@@ -56,7 +81,7 @@ export function renderDetailView(container, productId = 'baklava', { onNavigateB
         <!-- Ürün Görseli Tabak -->
         <div class="detay-tabak-alani">
           <div class="tabak detay-tabak" id="detayTabak" title="Sağa veya sola kaydırarak diğer ürünlere geçebilirsiniz">
-            <img src="${getProductImage(product.id, '.png')}" alt="${product.ad}" id="detayGorsel">
+            <img src="${getProductImage(product.id)}" alt="${ad}" id="detayGorsel">
           </div>
         </div>
       </div>
@@ -67,10 +92,11 @@ export function renderDetailView(container, productId = 'baklava', { onNavigateB
           ${ik('geri')}
         </button>
         <div class="detay-baslik-gizli" id="detayGizliBaslik" style="color:${category.metin}">
-          ${product.ad}
+          ${ad}
         </div>
         <div style="flex:1"></div>
-        <button class="ikon-buton cam" aria-label="Temayı Değiştir" data-action="tema-toggle" title="Temayı Değiştir">
+        ${renderLangButton(true)}
+        <button class="ikon-buton cam" aria-label="Tema" data-action="tema-toggle" title="Tema">
           ${ik(theme.isDark() ? 'gunes' : 'ay')}
         </button>
         <button class="ikon-buton cam" aria-label="Ses" data-action="ses-toggle">
@@ -88,42 +114,44 @@ export function renderDetailView(container, productId = 'baklava', { onNavigateB
         <!-- Rozetler -->
         <div class="kademe">
           <div class="rozetler">
-            ${product.rozet.map(renderBadge).join('')}
-            <span class="rozet" style="background:${category.acik}; color:var(--renk-gece)">${category.ad}</span>
+            ${product.tukendi ? renderTukendiBadge() : ''}
+            ${(product.rozet || []).map(renderBadge).join('')}
+            <span class="rozet" style="background:${category.acik}; color:var(--renk-gece)">${loc(category.ad)}</span>
           </div>
         </div>
 
         <!-- Başlık & Fiyat -->
         <div class="kademe" style="display:flex; align-items:flex-start; gap:12px; margin-top:12px">
-          <h1 class="h1" style="flex:1; color:var(--baslik)">${product.ad}</h1>
+          <h1 class="h1" style="flex:1; color:var(--baslik)">${ad}</h1>
           <span class="fiyat buyuk" id="detayFiyatBadge" style="margin-top:2px">${formatTL(unitPrice)}</span>
         </div>
 
         <!-- Kısa Açıklama -->
         <div class="kademe" style="margin-top:8px; font-size:15px; line-height:1.5; color:var(--metin-2); font-weight:500">
-          ${product.kisa}
+          ${loc(product.kisa)}
         </div>
 
         <!-- Porsiyon Seçimi -->
         <div class="kademe" style="margin-top:18px">
-          <div class="etiket" style="color:var(--metin-2); margin-bottom:8px">Porsiyon</div>
+          <div class="etiket" style="color:var(--metin-2); margin-bottom:8px">${sizes.length > 1 ? t('boy') : t('porsiyon')}</div>
           ${portionsHtml}
         </div>
+        ${extrasHtml}
 
         <!-- Kaydırınca Açılan Gizli İçerik (Alerjen & İçindekiler) -->
         <div class="kademe gizli-icerik" style="margin-top:22px">
-          <div class="etiket" style="color:var(--metin-2); margin-bottom:8px">Alerjenler</div>
+          <div class="etiket" style="color:var(--metin-2); margin-bottom:8px">${t('alerjenler')}</div>
           <div style="display:flex; flex-wrap:wrap; gap:6px">
-            ${allergens.map(a => `<span class="alerjen"><b>${a[0]}</b>${a}</span>`).join('')}
+            ${allergenLabels.map(a => `<span class="alerjen"><b>${(a || '?')[0]}</b>${a}</span>`).join('')}
           </div>
 
-          <div class="etiket" style="color:var(--metin-2); margin:18px 0 6px">İçindekiler</div>
+          <div class="etiket" style="color:var(--metin-2); margin:18px 0 6px">${t('icindekiler')}</div>
           <div style="font-size:14px; line-height:1.55; color:var(--metin)">
-            ${product.icindekiler || 'Doğal malzemeler ile günlük hazırlanmıştır.'}
+            ${loc(product.icindekiler)}
           </div>
 
           <div class="kucuk" style="margin-top:12px; font-size:12px; opacity:.8">
-            Alerjen bilgisi için lütfen personelimize danışın. Görseller temsilîdir.
+            ${t('alerjen_not')}
           </div>
         </div>
       </div>
@@ -139,12 +167,16 @@ export function renderDetailView(container, productId = 'baklava', { onNavigateB
           </div>
 
           <!-- Listeme Ekle Butonu -->
+          ${product.tukendi ? `
+          <button class="buton birincil" id="detayEkleBtn" style="flex:1" disabled>
+            <span>${t('tukendi')}</span>
+          </button>` : `
           <button class="buton birincil" id="detayEkleBtn" style="flex:1">
             ${ik('liste')}
-            <span>Listeme ekle</span>
+            <span>${t('listeme_ekle')}</span>
             <span class="ayrac"></span>
             <span id="detayToplamFiyat">${formatTL(totalPrice)}</span>
-          </button>
+          </button>`}
         </div>
       </footer>
     </div>
@@ -280,6 +312,8 @@ function setupHorizontalSwipe(container, { onPrev, onNext }) {
 function setupDetailListeners(container, { product, onNavigateBack }) {
   let quantity = 1;
   let selectedPortionIndex = 0;
+  const sizes = getProductSizes(product);
+  const extras = getProductExtras(product);
 
   const fiyatBadge = container.querySelector('#detayFiyatBadge');
   const toplamFiyatEl = container.querySelector('#detayToplamFiyat');
@@ -292,9 +326,16 @@ function setupDetailListeners(container, { product, onNavigateBack }) {
   const sesBtn = container.querySelector('[data-action="ses-toggle"]');
   const portionButtons = container.querySelectorAll('#porsiyonSegment button');
 
+  const selectedExtras = () =>
+    [...container.querySelectorAll('#ekstraListe input[data-ekstra]:checked')].map(i => i.value);
+
+  const unit = () => {
+    const boyId = (sizes[selectedPortionIndex] || sizes[0] || {}).id;
+    return computeItemPrice(product, boyId, selectedExtras());
+  };
+
   const updatePriceDisplay = () => {
-    const currentPortion = product.porsiyon[selectedPortionIndex] || [product.ad, product.fiyat];
-    const unitPrice = currentPortion[1];
+    const unitPrice = unit();
     const total = unitPrice * quantity;
     if (fiyatBadge) fiyatBadge.textContent = formatTL(unitPrice);
     if (toplamFiyatEl) toplamFiyatEl.textContent = formatTL(total);
@@ -309,6 +350,13 @@ function setupDetailListeners(container, { product, onNavigateBack }) {
       portionButtons.forEach(b => b.classList.remove('secili'));
       btn.classList.add('secili');
       selectedPortionIndex = parseInt(btn.dataset.idx, 10);
+      updatePriceDisplay();
+    });
+  });
+
+  container.querySelectorAll('#ekstraListe input[data-ekstra]').forEach(inp => {
+    inp.addEventListener('change', () => {
+      sound.play('dokunma');
       updatePriceDisplay();
     });
   });
@@ -336,28 +384,34 @@ function setupDetailListeners(container, { product, onNavigateBack }) {
   }
 
   // Listeme ekle
-  if (ekleBtn) {
+  if (ekleBtn && !product.tukendi) {
     ekleBtn.addEventListener('click', () => {
       sound.play('listeye-ekle');
       animateButtonPress(ekleBtn, () => {
-        const portion = product.porsiyon[selectedPortionIndex] || [product.ad, product.fiyat];
-        const portionName = portion[0];
-        const unitPrice = portion[1];
+        const size = sizes[selectedPortionIndex] || sizes[0];
+        const portionName = loc(size.ad);
+        const ekstraIds = selectedExtras();
+        const extraNames = extras.filter(e => ekstraIds.includes(e.id)).map(e => loc(e.ad));
+        const unitPrice = unit();
+        const label = [portionName, ...extraNames].filter(Boolean).join(', ');
 
         cart.addItem({
           productId: product.id,
-          ad: product.ad,
+          ad: loc(product.ad),
           portionIndex: selectedPortionIndex,
-          portionName: portionName,
-          unitPrice: unitPrice,
-          quantity: quantity,
-          image: getProductImage(product.id, '@600.webp')
+          portionName: label,
+          boyId: size.id,
+          ekstraIds,
+          ekstraAd: extraNames.join(', '),
+          unitPrice,
+          quantity,
+          image: getProductImage(product.id)
         });
 
         showToast(
-          'Listene eklendi',
-          `${quantity} × ${product.ad} (${portionName})`,
-          getProductImage(product.id, '@600.webp')
+          t('listene_eklendi'),
+          `${quantity} × ${loc(product.ad)} (${label})`,
+          getProductImage(product.id)
         );
       });
     });
